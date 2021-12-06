@@ -30,8 +30,10 @@ namespace Dottik.PTR2.Web
                 await memoryStream.CopyToAsync(file);
                 WriteLine("Debug - Done!");
 
-                //When done we close the streams to cheap out on resources and avoid unwanted problems
-                WriteLine("Debug - Closing Memory and File stream...");
+                WriteLine("Debug - Flushing & Closing Memory and File stream...");
+                //When done we flush and close the streams to cheap out on resources
+                await file.FlushAsync();
+                await memoryStream.FlushAsync();
                 file.Close();
                 memoryStream.Close();
                 WriteLine("Debug - Done!");

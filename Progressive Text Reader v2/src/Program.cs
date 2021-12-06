@@ -1,13 +1,14 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
-using static Dottik.PTR2.Data;
-using static System.Console;
+﻿global using System;
+global using System.IO;
+global using System.Threading.Tasks;
+global using static Dottik.PTR2.Data;
+global using static System.Console;
 
 namespace Dottik.PTR2
 {
     internal class Program : WebObjects
     {
+        protected static Data dat = new();
         /// <summary>
         /// The program's entry point, here is where the fun begins!
         /// </summary>
@@ -17,9 +18,6 @@ namespace Dottik.PTR2
             /// Generate new instance of data and WebObjects, avoids deadlocks in certain circumstances, see
             /// https://docs.microsoft.com/en-gb/dotnet/fundamentals/code-analysis/quality-rules/ca2211 for more information
             ///-----------------------------------------------
-            WebObjects wObj = new();
-            Data dat = new();
-
             string customText;
             foreach (var argument in args)
             {
