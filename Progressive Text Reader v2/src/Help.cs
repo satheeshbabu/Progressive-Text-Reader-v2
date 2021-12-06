@@ -13,14 +13,15 @@
 
             WriteLine("###########################################");
 
-            Write("#####"); ForegroundColor = ConsoleColor.Green; WriteLine("    --help                    || Prints this message");
-            Write("#####");
-            Write("#####"); ForegroundColor = ConsoleColor.Green; WriteLine("    --custom                  || Type text in console and then it get's printed, no file needed");
-            Write("#####");
-            Write("#####"); ForegroundColor = ConsoleColor.Green; WriteLine("    --create-text             || Creates the text file that the program reads to print");
-            Write("#####");
-            Write("#####"); ForegroundColor = ConsoleColor.Green; WriteLine("    --latency=<Miliseconds>   || Add a custom latency!");
-
+            ForegroundColor = ConsoleColor.Cyan;
+            Write("#####"); ForegroundColor = ConsoleColor.Green; WriteLine("\t--help                    || Prints this message"); ForegroundColor = ConsoleColor.Cyan; 
+            WriteLine("#####");
+            Write("#####"); ForegroundColor = ConsoleColor.Green; WriteLine("\t--custom                  || Type text in console and then it get's printed, no file needed"); ForegroundColor = ConsoleColor.Cyan;
+            WriteLine("#####");
+            Write("#####"); ForegroundColor = ConsoleColor.Green; WriteLine("\t--create-text             || Creates the text file that the program reads to print"); ForegroundColor = ConsoleColor.Cyan;
+            WriteLine("#####");
+            Write("#####"); ForegroundColor = ConsoleColor.Green; WriteLine("\t--latency=<Miliseconds>   || Add a custom latency!"); ForegroundColor = ConsoleColor.Cyan;
+            WriteLine("###########################################");
         }
     }
 }
