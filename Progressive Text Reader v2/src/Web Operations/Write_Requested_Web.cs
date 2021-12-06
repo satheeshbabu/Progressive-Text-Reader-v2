@@ -13,7 +13,7 @@ namespace Dottik.PTR2.Web
         /// </summary>
         public static async Task WriteFile(string pathToSave, string fileName, WebObjects wObj)
         {
-            if (wObj.connectionFailed || !wObj.connectionStablished) {
+            if (wObj.connectionFailed || !wObj.connectionStablished && wObj.httpResponseMessage != null) {
                 WriteLine("There was not a stablished connection, downloading a file is just impossible!");
             } else {
 

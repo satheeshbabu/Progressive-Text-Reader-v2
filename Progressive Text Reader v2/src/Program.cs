@@ -33,7 +33,7 @@ namespace Dottik.PTR2
                         ForegroundColor = ConsoleColor.Red;
                         Write("Invalid Latency value! Try again.");
                         ForegroundColor = ConsoleColor.Gray;
-                        Environment.Exit(69);
+                        Environment.Exit(69); /*😳*/
                     }
                 }
                 switch (argument)
