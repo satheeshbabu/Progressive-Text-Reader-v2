@@ -17,7 +17,8 @@
         public readonly string textFile = "read-this.txt";
         
         //RW Signed Integers
-        public int delayInMsec = 50;
+        public long delayInMsec = 50;
+        public long writtenChars = 50;
         
     }
     public class JSONHandling

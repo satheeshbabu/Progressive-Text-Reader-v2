@@ -3,10 +3,13 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>Progressive_Text_Reader_v2</RootNamespace>
+    <RootNamespace>Dottik.PTR2</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Platforms>AnyCPU;x64</Platforms>
+    <DebugType>embedded</DebugType>
+    <AnalysisLevel>5.0</AnalysisLevel>
+    <AssemblyName>Progressive-Text-Reader-v2</AssemblyName>
   </PropertyGroup>
 
 </Project>

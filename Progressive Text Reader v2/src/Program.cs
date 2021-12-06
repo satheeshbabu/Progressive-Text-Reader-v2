@@ -12,20 +12,18 @@
             ///     |  Generate new instance of data and WebObjects, avoids deadlocks in certain circumstances, see                  |
             ///     |  https://docs.microsoft.com/en-gb/dotnet/fundamentals/code-analysis/quality-rules/ca2211 for more information  |
             ///     |----------------------------------------------------------------------------------------------------------------|
-
-            string customText;
             foreach (var argument in args)
             {
                 if (argument.Contains("--latency="))
                 {
                     string[] msec = argument.Split('=');
-                    if (!int.TryParse(msec[1], out dat.delayInMsec))
+                    if (!long.TryParse(msec[1], out dat.delayInMsec))
                     {
                         Clear();
                         ForegroundColor = ConsoleColor.Red;
                         Write("Invalid Latency value! Try again.");
                         ForegroundColor = ConsoleColor.Gray;
-                        Environment.Exit(69); /*😳*/
+                        Environment.Exit(69); /*:flushed:*/
                     }
                 }
                 switch (argument)
@@ -36,27 +34,34 @@
                     case "--custom":
                         dat.programMode = "customText";
                         break;
-                    case "--create-text-file":
+                    case "--create-text":
                         WriteLine("Creating text file...");
-                        File.Create(dat.textFile);
+                        File.CreateText(dat.textFile);
                         WriteLine("Done!");
                         Environment.Exit(0);
                         break;
+                    case "--read-file":
+                        dat.programMode = "readFile";
+                        break;
                 }
             }
+
             switch (dat.programMode)
             {
+                case "readFile":
+                    await ProgressiveReader.ReadLinesFromFile(path: Environment.CurrentDirectory, fileName: dat.textFile);
+                    break;
+                case "customText":
+                    ProgressiveReader.ReadLinesCustom(text: ReadLine());
+                    break;
                 case "help":
                     Help.PrintHelp();
                     break;
-
                 default:
-                    WriteLine("There was no argument charged. Is this a test? Ok, Loading Help Statement...");
                     Help.PrintHelp();
-                    ReadLine();
                     Environment.Exit(0);
                     break;
-            }
+            } 
         }
     }
 }
