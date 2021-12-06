@@ -12,4 +12,8 @@
     <AssemblyName>Progressive-Text-Reader-v2</AssemblyName>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Spectre.Console" Version="0.43.1-preview.0.2" />
+  </ItemGroup>
+
 </Project>

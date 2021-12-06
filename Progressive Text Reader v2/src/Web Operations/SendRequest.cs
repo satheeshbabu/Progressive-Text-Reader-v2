@@ -16,7 +16,7 @@
                 return wObj;
             } catch (Exception ex)
             {
-                Console.WriteLine("An error ocurred while making the web request to {0}\n\tError Message: {1}", uri, ex.Message);
+                System.Console.WriteLine("An error ocurred while making the web request to {0}\n\tError Message: {1}", uri, ex.Message);
                 //Make the response null so we can avoid using it incorrectly
                 wObj.connectionFailed = true;
                 wObj.connectionStablished = false;

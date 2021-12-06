@@ -20,9 +20,9 @@
                     if (!long.TryParse(msec[1], out dat.delayInMsec))
                     {
                         Clear();
-                        ForegroundColor = ConsoleColor.Red;
-                        Write("Invalid Latency value! Try again.");
-                        ForegroundColor = ConsoleColor.Gray;
+                        System.Console.ForegroundColor = ConsoleColor.Red;
+                        Markup("[red]Invalid [underline]Latency[/] value! Try again.[/]");
+                        System.Console.ForegroundColor = ConsoleColor.Gray;
                         Environment.Exit(69); /*:flushed:*/
                     }
                 }
@@ -35,9 +35,9 @@
                         dat.programMode = "customText";
                         break;
                     case "--create-text":
-                        WriteLine("Creating text file...");
+                        MarkupLine("[orange1]Creating text file...[/]");
                         File.CreateText(dat.textFile);
-                        WriteLine("Done!");
+                        MarkupLine("[green1]Done![/]");
                         Environment.Exit(0);
                         break;
                     case "--read-file":
@@ -52,7 +52,7 @@
                     await ProgressiveReader.ReadLinesFromFile(path: Environment.CurrentDirectory, fileName: dat.textFile);
                     break;
                 case "customText":
-                    ProgressiveReader.ReadLinesCustom(text: ReadLine());
+                    ProgressiveReader.ReadLinesCustom(text: AnsiConsole.Ask<string>("Write [underline red]your[/] custom text here: "));
                     break;
                 case "help":
                     Help.PrintHelp();

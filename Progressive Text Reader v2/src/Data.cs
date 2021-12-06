@@ -18,7 +18,7 @@
         
         //RW Signed Integers
         public long delayInMsec = 50;
-        public long writtenChars = 50;
+        public long writtenChars = 0;
         
     }
     public class JSONHandling

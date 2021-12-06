@@ -13,7 +13,7 @@
                 chars = a.ToCharArray();
                 foreach (char b in chars)
                 {
-                    Write(b);
+                    Markup(b.ToString());
                     Thread.Sleep(int.Parse(dat.delayInMsec.ToString()));
                     dat.writtenChars++;
                 }
@@ -28,7 +28,7 @@
                 char[] chars = text.ToCharArray();
                 foreach (char b in chars)
                 {
-                    Write(b);
+                    Markup(b.ToString());
                     Thread.Sleep(int.Parse(dat.delayInMsec.ToString()));
                     dat.writtenChars++;
                 } 
@@ -37,7 +37,7 @@
         }
         private static void EndRead()
         {
-            WriteLine("\n Written {0} Characters!", dat.writtenChars);
+            MarkupLine("\n Written [underline bold orange1]{0}[/] Characters!", dat.writtenChars);
             return;
         }
     }

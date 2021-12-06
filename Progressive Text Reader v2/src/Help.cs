@@ -4,27 +4,24 @@
     {
         public static void PrintHelp()
         {
-            ForegroundColor = ConsoleColor.Cyan;
-            WriteLine("###########################################");
-            WriteLine("#------ Progressive Text Reader 2.0 ------#");
-            WriteLine("#------         By Dottik           ------#");
-            WriteLine("###########################################");
-            WriteLine("###########################################");
+            MarkupLine("[cyan]###########################################[/]");
+            MarkupLine("[cyan]#[green1]------[/] [orange1]Progressive Text Reader[/] [white]2.0[/] [green1]------[/]#[/]");
+            MarkupLine("[cyan]#[green1]------[/]         By [underline red]Dottik[/]           [green1]------[/]#[/]");
+            MarkupLine("[cyan]###########################################[/]");
+            MarkupLine("[cyan]###########################################[/]");
 
-            WriteLine("###########################################");
+            MarkupLine("[cyan]###########################################[/]");
 
-            ForegroundColor = ConsoleColor.Cyan;
-            Write("#####"); ForegroundColor = ConsoleColor.Green; WriteLine("\t--help                       || Prints this message"); ForegroundColor = ConsoleColor.Cyan; 
-            WriteLine("#####");
-            Write("#####"); ForegroundColor = ConsoleColor.Green; WriteLine("\t--custom                     || Type text in console and then it get's printed, no file needed"); ForegroundColor = ConsoleColor.Cyan;
-            WriteLine("#####");
-            Write("#####"); ForegroundColor = ConsoleColor.Green; WriteLine("\t--create-text                || Creates the text file that the program reads to print"); ForegroundColor = ConsoleColor.Cyan;
-            WriteLine("#####");
-            Write("#####"); ForegroundColor = ConsoleColor.Green; WriteLine("\t--latency=<Miliseconds>      || Add a custom latency!"); ForegroundColor = ConsoleColor.Cyan;
-            WriteLine("#####");
-            Write("#####"); ForegroundColor = ConsoleColor.Green; WriteLine("\t--read-file                  || Read file created by the program!"); ForegroundColor = ConsoleColor.Cyan;
-            WriteLine("###########################################");
-            ForegroundColor = ConsoleColor.Gray;
+            MarkupLine("[cyan]#####[/][green]\t--help                       [red]||[/] Prints this message[/]");
+            MarkupLine("[cyan]#####[/]");
+            MarkupLine("[cyan]#####[/][green]\t--custom                     [red]||[/] Type text in console and then it get's printed, no file needed[/]");
+            MarkupLine("[cyan]#####[/]");
+            MarkupLine("[cyan]#####[/][green]\t--create-text                [red]||[/] Creates the text file that the program reads to print[/]");
+            MarkupLine("[cyan]#####[/]");
+            MarkupLine("[cyan]#####[/][green]\t--latency=[blue]<Miliseconds>[/]      [red]||[/] Add a custom latency![/]");
+            MarkupLine("[cyan]#####[/]");
+            MarkupLine("[cyan]#####[/][green]\t--read-file                  [red]||[/] Read the text file created by the program![/]");
+            MarkupLine("[cyan]###########################################[/]");
         }
     }
 }
