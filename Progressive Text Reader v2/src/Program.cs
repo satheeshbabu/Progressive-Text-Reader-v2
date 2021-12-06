@@ -19,8 +19,7 @@
                 if (argument.Contains("--latency="))
                 {
                     string[] msec = argument.Split('=');
-                    string wordDelay = msec[1];
-                    if (!int.TryParse(wordDelay, out dat.delayInMsec))
+                    if (!int.TryParse(msec[1], out dat.delayInMsec))
                     {
                         Clear();
                         ForegroundColor = ConsoleColor.Red;
@@ -48,7 +47,7 @@
             switch (dat.programMode)
             {
                 case "help":
-
+                    Help.PrintHelp();
                     break;
 
                 default:
