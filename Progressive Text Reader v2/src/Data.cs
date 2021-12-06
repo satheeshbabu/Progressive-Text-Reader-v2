@@ -1,7 +1,4 @@
-﻿using System;
-using System.Net.Http;
-
-namespace Dottik.PTR2
+﻿namespace Dottik.PTR2
 {
     internal class WebObjects
     {
@@ -12,10 +9,16 @@ namespace Dottik.PTR2
     }
     public class Data
     {
+        //RW Strings
         public string programMode = "test";
+        
+        //RO Strings
         public readonly string author = "Dottik";
         public readonly string textFile = "read-this.txt";
+        
+        //RW Signed Integers
         public int delayInMsec = 50;
+        
     }
     public class JSONHandling
     {

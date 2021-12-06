@@ -1,14 +1,11 @@
-﻿using System;
-using System.Threading.Tasks;
-
-namespace Dottik.PTR2.Web 
+﻿namespace Dottik.PTR2.Web 
 {
     internal class SendRequest : WebObjects
     {
         /// <summary>
         /// Makes a request to a webpage, if the request is != than OK(200) this will fail... likely.
         /// </summary>
-        public static async Task<WebObjects> MakeRequest(string uri, WebObjects wObj)
+        public static async Task<WebObjects?> MakeRequest(string uri, WebObjects wObj)
         {
             wObj.httpResponseMessage = await wObj.httpClient.GetAsync(uri);
             try

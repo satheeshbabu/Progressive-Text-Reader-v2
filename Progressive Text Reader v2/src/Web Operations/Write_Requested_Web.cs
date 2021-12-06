@@ -1,9 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
-using static System.Console;
-
-namespace Dottik.PTR2.Web
+﻿namespace Dottik.PTR2.Web
 {
     internal class Write : WebObjects
     {

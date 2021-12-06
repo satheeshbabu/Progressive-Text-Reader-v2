@@ -1,10 +1,4 @@
-﻿global using System;
-global using System.IO;
-global using System.Threading.Tasks;
-global using static Dottik.PTR2.Data;
-global using static System.Console;
-
-namespace Dottik.PTR2
+﻿namespace Dottik.PTR2
 {
     internal class Program : WebObjects
     {
@@ -14,10 +8,11 @@ namespace Dottik.PTR2
         /// </summary>
         static async Task Main(string[] args)
         {
+            ///     |----------------------------------------------------------------------------------------------------------------|
+            ///     |  Generate new instance of data and WebObjects, avoids deadlocks in certain circumstances, see                  |
+            ///     |  https://docs.microsoft.com/en-gb/dotnet/fundamentals/code-analysis/quality-rules/ca2211 for more information  |
+            ///     |----------------------------------------------------------------------------------------------------------------|
 
-            /// Generate new instance of data and WebObjects, avoids deadlocks in certain circumstances, see
-            /// https://docs.microsoft.com/en-gb/dotnet/fundamentals/code-analysis/quality-rules/ca2211 for more information
-            ///-----------------------------------------------
             string customText;
             foreach (var argument in args)
             {
@@ -52,8 +47,13 @@ namespace Dottik.PTR2
             }
             switch (dat.programMode)
             {
+                case "help":
+
+                    break;
+
                 default:
-                    WriteLine("There was no argument charged. Is this a test?");
+                    WriteLine("There was no argument charged. Is this a test? Ok, Loading Help Statement...");
+                    Help.PrintHelp();
                     ReadLine();
                     Environment.Exit(0);
                     break;

@@ -1,0 +1,10 @@
+﻿global using System;
+global using System.IO;
+global using System.Threading.Tasks;
+global using System.Net.Http;
+global using System.Collections.Generic;
+global using System.Linq;
+global using System.Text;
+global using System.IO.Compression;
+global using static Dottik.PTR2.Data;
+global using static System.Console;
