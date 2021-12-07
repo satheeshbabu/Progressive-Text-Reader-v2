@@ -20,9 +20,7 @@
                     if (!long.TryParse(msec[1], out dat.delayInMsec))
                     {
                         Clear();
-                        System.Console.ForegroundColor = ConsoleColor.Red;
                         Markup("[red]Invalid [underline]Latency[/] value! Try again.[/]");
-                        System.Console.ForegroundColor = ConsoleColor.Gray;
                         Environment.Exit(69); /*:flushed:*/
                     }
                 }
