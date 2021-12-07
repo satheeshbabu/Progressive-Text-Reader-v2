@@ -37,7 +37,7 @@
         }
         private static void EndRead()
         {
-            MarkupLine("\n Written [underline bold orange1]{0}[/] Characters!", dat.writtenChars);
+            MarkupLine($"\n Written [underline bold orange1]{dat.writtenChars}[/] Characters!");
             return;
         }
     }

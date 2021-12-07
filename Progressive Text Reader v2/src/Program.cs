@@ -21,7 +21,7 @@
                     {
                         Clear();
                         Markup("[red]Invalid [underline]Latency[/] value! Try again.[/]");
-                        Environment.Exit(69); /*:flushed:*/
+                        Environment.Exit(69); /*😳*/
                     }
                 }
                 switch (argument)
